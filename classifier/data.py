@@ -1,19 +1,20 @@
 import torch
 import torchvision
 import torchvision.transforms as transforms
+import classifier
 
 transform = transforms.Compose(
     [transforms.ToTensor(),
      transforms.Normalize((0.5, 0.5, 0.5), (0.5, 0.5, 0.5))])
 
-batchSize = 8
+
 
 def trainloading():
     trainset = torchvision.datasets.CIFAR10(root='./data', train=True, download=True, transform=transform)
-    trainloader = torch.utils.data.DataLoader(trainset, batch_size=batchSize, shuffle=True, num_workers=2)
+    trainloader = torch.utils.data.DataLoader(trainset, batch_size=classifier.batchSize, shuffle=True, num_workers=2)
     return trainloader
 
 def testloading():
     testset = torchvision.datasets.CIFAR10(root='./data', train=False, download=True, transform=transform)
-    testloader = torch.utils.data.DataLoader(testset, batch_size=batchSize, shuffle=False, num_workers=2)
+    testloader = torch.utils.data.DataLoader(testset, batch_size=classifier.batchSize, shuffle=False, num_workers=2)
     return testloader
