@@ -1,0 +1,54 @@
+{
+    "os": "Linux-6.2.0-36-generic-x86_64-with-glibc2.35",
+    "python": "3.11.5",
+    "heartbeatAt": "2023-11-03T12:56:32.310121",
+    "startedAt": "2023-11-03T12:56:31.442812",
+    "docker": null,
+    "cuda": null,
+    "args": [],
+    "state": "running",
+    "program": "/home/d/vscode_code/test_package.py",
+    "codePathLocal": "test_package.py",
+    "codePath": "test_package.py",
+    "host": "d-MacBookPro",
+    "username": "d",
+    "executable": "/home/d/miniconda3/bin/python",
+    "cpu_count": 2,
+    "cpu_count_logical": 4,
+    "cpu_freq": {
+        "current": 2861.3610000000003,
+        "min": 1200.0,
+        "max": 3200.0
+    },
+    "cpu_freq_per_core": [
+        {
+            "current": 2883.743,
+            "min": 1200.0,
+            "max": 3200.0
+        },
+        {
+            "current": 2852.517,
+            "min": 1200.0,
+            "max": 3200.0
+        },
+        {
+            "current": 2813.547,
+            "min": 1200.0,
+            "max": 3200.0
+        },
+        {
+            "current": 2895.637,
+            "min": 1200.0,
+            "max": 3200.0
+        }
+    ],
+    "disk": {
+        "/": {
+            "total": 40.95445251464844,
+            "used": 22.965991973876953
+        }
+    },
+    "memory": {
+        "total": 7.624794006347656
+    }
+}

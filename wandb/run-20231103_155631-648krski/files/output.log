@@ -1,0 +1,28 @@
+Train started
+Files already downloaded and verified
+[1,  2000] loss: 2.166
+[1,  4000] loss: 1.823
+[1,  6000] loss: 1.668
+[1,  8000] loss: 1.545
+[1, 10000] loss: 1.490
+[1, 12000] loss: 1.473
+[2,  2000] loss: 1.384
+[2,  4000] loss: 1.379
+[2,  6000] loss: 1.354
+[2,  8000] loss: 1.306
+[2, 10000] loss: 1.322
+[2, 12000] loss: 1.307
+Training finished
+Test started
+Files already downloaded and verified
+Accuracy of the network on the 10000 test images: 54 %
+Accuracy for class: plane is 69.4 %
+Accuracy for class: car   is 79.3 %
+Accuracy for class: bird  is 36.3 %
+Accuracy for class: cat   is 34.4 %
+Accuracy for class: deer  is 46.9 %
+Accuracy for class: dog   is 35.8 %
+Accuracy for class: frog  is 70.5 %
+Accuracy for class: horse is 58.9 %
+Accuracy for class: ship  is 69.8 %
+Accuracy for class: truck is 47.5 %
