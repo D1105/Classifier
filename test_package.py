@@ -2,16 +2,30 @@ import classifier.data
 import classifier.model
 import classifier.train
 import classifier
+import pytorch_lightning as L
+import wandb
+from classifier.train import trainer, dm
 
-net = classifier.model.Net()
+wandb.init(
+    project="pytorch_classification",
 
-print('Train started')
-trainloader = classifier.data.trainloading()
-classifier.train.train(net, trainloader)
+    config={
+    "learning_rate": classifier.learning_rate,
+    "dataset": "CIFAR-10",
+    "batch_size": classifier.batch_size,
+    "epochs": classifier.epochs,
+    }
+)
+net = classifier.neural_network.Net(len(classifier.classes))
 
-print('Test started')
-testloader = classifier.data.testloading()
-classifier.model.testNet(net, testloader)
+trainer.fit(net,dm)
 
+trainer.validate(net, dm)
 
-classifier.model.accuracy_for_classes(net, testloader)
+trainer.test(net, dm)
+
+classifier.neural_network.accuracy_for_classes(net, dm.test_dataloader())
+
+wandb.finish()
+
+classifier.neural_network.saveNet(net,'')
