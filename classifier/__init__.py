@@ -1,21 +1,13 @@
 import wandb
+import torch
 
-batchSize = 4
-epochs = 2
-learning_rate = 0.001
+batch_size = 64
+epochs = 15
+learning_rate = 2e-4
 
-wandb.init(
-    # set the wandb project where this run will be logged
-    project="ClassifierProject",
-    
-    # track hyperparameters and run metadata
-    config={
-    "learning_rate": learning_rate,
-    "architecture": "CNN",
-    "dataset": "CIFAR-10",
-    "batch_size": batchSize,
-    "epochs": epochs,
-    }
-)
 
-classes = ('plane', 'car', 'bird', 'cat', 'deer', 'dog', 'frog', 'horse', 'ship', 'truck')
+classes = ('plane', 'car', 'bird', 'cat',
+        'deer', 'dog', 'frog', 'horse', 'ship', 'truck')
+
+random_seed = 42
+torch.manual_seed(random_seed);
